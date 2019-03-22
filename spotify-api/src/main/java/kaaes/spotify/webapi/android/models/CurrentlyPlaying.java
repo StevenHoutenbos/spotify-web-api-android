@@ -14,6 +14,7 @@ public class CurrentlyPlaying implements Parcelable {
     public Integer progress_ms;
     public boolean is_playing;
     public Track item;
+    public String currently_playing_type;
 
     protected CurrentlyPlaying(Parcel in) {
         context = in.readParcelable(CurrentlyPlayingContext.class.getClassLoader());
