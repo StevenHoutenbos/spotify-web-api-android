@@ -10,7 +10,7 @@ import android.os.Parcelable;
 public class CurrentlyPlaying implements Parcelable {
 
     CurrentlyPlayingContext context;
-    public Integer timestamp;
+    public Long timestamp;
     public Integer progress_ms;
     public boolean is_playing;
     public Track item;
@@ -18,7 +18,7 @@ public class CurrentlyPlaying implements Parcelable {
 
     protected CurrentlyPlaying(Parcel in) {
         context = in.readParcelable(CurrentlyPlayingContext.class.getClassLoader());
-        timestamp = (Integer) in.readValue(Integer.class.getClassLoader());
+        timestamp = (Long) in.readValue(Long.class.getClassLoader());
         progress_ms = (Integer) in.readValue(Integer.class.getClassLoader());
         is_playing = in.readByte() != 0;
         item = in.readParcelable(Track.class.getClassLoader());
