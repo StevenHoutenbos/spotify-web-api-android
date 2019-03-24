@@ -1830,7 +1830,7 @@ public interface SpotifyService {
     @GET("/me/player/currently-playing")
     CurrentlyPlaying getCurrentlyPlaying(@Query("market") String market);
     
-    @PUT("/me/me/player/pause")
+    @PUT("/me/player/pause")
     Result pause(@Query("device_id") String ids);
 
     @PUT("/me/player/play")
