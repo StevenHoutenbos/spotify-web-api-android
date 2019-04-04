@@ -1834,7 +1834,7 @@ public interface SpotifyService {
     Result pause(@Query("device_id") String ids);
 
     @PUT("/me/player/play")
-    Result play(@Query("device_id") String ids, @Query("uris") String trackUris);
+    Result play(@Query("device_id") String ids, @Query("context_uri") String trackUris);
 
     @POST("/me/player/next")
     Result next(@Query("device_id") String ids);
