@@ -1834,7 +1834,7 @@ public interface SpotifyService {
     Result pause(@Query("device_id") String ids);
 
     @PUT("/me/player/play")
-    Result play(@QueryMap Map<String, String> options);
+    Result play(@Query("uris") String trackUris);
 
     @POST("/me/player/next")
     Result next(@Query("device_id") String ids);
